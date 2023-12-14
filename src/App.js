@@ -37,7 +37,7 @@ function App() {
   console.log(allMeal)
   return (
     <div>
-      <h1>Transforming List in JavaScript</h1>
+      <h1>use of map function</h1>
     </div>
   );
 }
