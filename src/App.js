@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+const data = [
+  {
+    id: "1",
+    title: "Baryani",
+    description: "very delicious ",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Frecipes.timesofindia.com%2Frecipes%2Fchicken-dum-biryani%2Frs54308405.cms&psig=AOvVaw3Awtkm9t01vU0HUyQIJRWc&ust=1702661542209000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCODvy9q6j4MDFQAAAAAdAAAAABAE",
+    price: "230",
+
+  },
+  {
+    id: "2",
+    title: "pizza",
+    description: "very testy",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Fpizza&psig=AOvVaw2nH-BeEDZMBHsp36lHAkTH&ust=1702661735105000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCKjVsra7j4MDFQAAAAAdAAAAABAE",
+    price: "1230",
+
+  },
+  {
+    id: "3",
+    title: "Cake",
+    description: "Pine Apple",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.faridabadcake.com%2Fproduct-category%2Fpineapple-cakes%2F&psig=AOvVaw0bsj3d6MpdKIcGuWNaScHn&ust=1702661826442000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCLCj2vi7j4MDFQAAAAAdAAAAABAE",
+    price: "1030",
+
+  }
+]
+
+const allMeal = data.map(meal => {
+  return {
+    content: `${meal.title} - ${meal.description}`,
+    price: meal.price
+
+  }
+})
 
 function App() {
+  console.log(allMeal)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Transforming List in JavaScript</h1>
     </div>
   );
 }
