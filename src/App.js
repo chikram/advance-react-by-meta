@@ -1,4 +1,4 @@
-const data = [
+const allMeal = [
   {
     id: "1",
     title: "Baryani",
@@ -25,19 +25,14 @@ const data = [
   }
 ]
 
-const allMeal = data.map(meal => {
-  return {
-    content: `${meal.title} - ${meal.description}`,
-    price: meal.price
-
-  }
-})
-
 function App() {
-  console.log(allMeal)
+  const listItems = allMeal.map(meal => {
+    const itemText = `${meal.title} - ${meal.description} - ${meal.price}`
+    return (<li>{itemText}</li>)
+  })
   return (
     <div>
-      <h1>use of map function</h1>
+      <ul>{listItems}</ul>
     </div>
   );
 }
